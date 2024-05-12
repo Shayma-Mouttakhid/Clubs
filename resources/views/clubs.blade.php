@@ -1,14 +1,10 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('ALL CLUBS') }}
-            <form action="{{ route('clubs.create') }}" method="POST" class="inline pointer-events-none">
-                @csrf
-                @method('post')
-                <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded-lg shadow-lg ml-2">Ajouter Club</button>
-            </form>
-            
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight flex justify-between items-center">
+            <span>{{ __('ALL CLUBS') }}</span>
+            <a href="{{ route('clubs.create') }}" class="px-4 py-2 bg-blue-500 text-white rounded-lg shadow-lg">Ajouter Club</a>
         </h2>
+        
     </x-slot>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -28,11 +24,11 @@
                 </div>  --}}
                 <div>
                     <div class="block text-center m-4 pointer-events-none">
-                        <a href="{{ route('clubs.edit', $club->id) }}" class="inline-block px-4 py-2 bg-blue-500 text-white rounded-lg shadow-lg">Edit</a>
+                        <a href="{{ route('clubs.destroy', $club->id) }}" class="inline-block px-4 py-2 bg-blue-500 text-white rounded-lg shadow-lg">Modifier</a>
                         <form action="{{ route('clubs.destroy', $club->id) }}" method="POST" class="inline pointer-events-none">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="px-4 py-2 bg-red-500 text-white rounded-lg shadow-lg ml-2">Delete</button>
+                            <button type="submit" class="px-4 py-2 bg-blue-300 text-white rounded-lg shadow-lg ml-2">Supprimer</button>
                         </form>
                     </div>
                 </div>

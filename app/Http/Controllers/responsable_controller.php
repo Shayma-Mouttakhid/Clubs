@@ -37,5 +37,6 @@ class responsable_controller extends Controller
 }
 
 
+
     // Other controller methods (create, store, edit, update, destroy) go here...
 }

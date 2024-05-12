@@ -43,7 +43,7 @@
                     <div class="collapse navbar-collapse text-center" id="navigation">
                         <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-								<a class="nav-link text-dark" href="{{route('home')}}">Home</a>
+								<a class="nav-link text-dark" href="{{route('home')}}">Acceuil</a>
 							</li>
                         <li class="nav-item">
 							<a class="nav-link text-dark" href="{{ url('/clubs') }}">Clubs</a>
