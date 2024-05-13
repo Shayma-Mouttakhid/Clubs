@@ -9,18 +9,17 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
-    {
-        Schema::create('clubs', function (Blueprint $table) {
-            $table->id();
-            $table->string('nom_club');
-            $table->string('rspnsbl_club');
-            $table->text('description');
-            $table->string('image');
-            
-            $table->timestamps();
-        });
-    }
+    public function up()
+{
+    Schema::create('clubs', function (Blueprint $table) {
+        $table->id();
+        $table->string('nom_club');
+        $table->string('rspnsbl_club');
+        $table->text('description');
+        $table->string('image')->default('default_image.jpg'); // Set default value
+        $table->timestamps();
+    });
+}
 
     /**
      * Reverse the migrations.
